@@ -15,7 +15,7 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
-
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
@@ -25,9 +25,42 @@
 <body>
 
   <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <div class="container">
+    <div class="col-md-10 mt-5">
+      <h5>Create new post</h5>
+      <div id="form-info"></div>
+      <h6><a href=''>All notes</a></h6>
+      <hr>
+       <form class="form" method="POST" id="create-note-form">
+          <div class="form-group">
+              <label>
+                  Post Title
+              </label>
+              <input type="text" name='post_title' class="form-control">
+          </div>
+
+          <div class="form-group">
+              <label>
+                  Post Content
+              </label>
+              <textarea class="form-control" name="post_content" id="post_content"></textarea>
+          </div>
+
+          <div class="form-group">
+              <button type="submit" class="btn btn-primary" id="create-post-form-btn">Create Post</button>
+          </div>
+      </form>
+     </div>
+  </div>
+
+
+
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/ckeditor4/ckeditor.js"></script>
+  <script src="node_modules/axios/dist/axios.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
